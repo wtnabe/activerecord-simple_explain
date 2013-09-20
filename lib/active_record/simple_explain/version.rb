@@ -1,5 +1,5 @@
 module ActiveRecord
-  module SimpleExplain
+  class SimpleExplain
     VERSION = "0.0.1"
   end
 end

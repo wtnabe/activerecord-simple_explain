@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = ActiveRecord::SimpleExplain::VERSION
   spec.authors       = ["wtnabe"]
   spec.email         = ["wtnabe@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{explain method for ActiveRecord 3.0.x and 3.1.x}
+  spec.summary       = ""
+  spec.homepage      = "https://github.com/wtnabe/activerecord-simple_explain"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -18,7 +18,10 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "hirb"
+  spec.required_ruby_version = ">= 1.8.7"
+
+  spec.add_runtime_dependency "activerecord", "< 4.0", ">= 3.0"
+  spec.add_runtime_dependency "hirb-unicode"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
