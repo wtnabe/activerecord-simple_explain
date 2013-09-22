@@ -1,4 +1,4 @@
-require File.expand_path(File.dirname(__FILE__) + '/adapter_interface')
+require 'active_record/simple_explain/connection_adapters/adapter_interface'
 
 module ActiveRecord
   class SimpleExplain
