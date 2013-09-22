@@ -29,7 +29,7 @@ module ActiveRecord
     end
 
     def load_adapter(adapter)
-      require File.expand_path(File.dirname(__FILE__) + "/simple_explain/connection_adapters/#{filename(adapter)}")
+      require "active_record/simple_explain/connection_adapters/#{filename(adapter)}"
       self.class_eval {
         include ActiveRecord::SimpleExplain.const_get(adapter)
       }
